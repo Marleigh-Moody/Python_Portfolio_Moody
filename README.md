@@ -1757,5 +1757,308 @@ print(len(name))
 
     3
 
+## Making choices
+
+```python
+num = 37 
+if num > 100:
+    print('greater')
+else:
+    print('not great')
+print('done')
+```
+
+    not great
+    done
+
+
+
+```python
+num = 53
+print('before conditional...')
+if num > 100:
+    print(num, 'is greater than 100')
+print('...after conditional')
+```
+
+    before conditional...
+    ...after conditional
+
+
+
+```python
+num = 14 
+
+if num > 0:
+    print(num, 'is positive')
+elif num == 0: 
+    print(num, 'is zero')
+else:
+    print('is negative')
+```
+
+    14 is positive
+
+
+
+```python
+if (1 > 0) and (-1 >= 0):
+    print('bothparts are true')
+else: 
+    print('at least one part if false')
+```
+
+    at least one part if false
+
+
+
+```python
+if (1 > 0) or (-1 >=0):
+    print('at least one part is true')
+else: 
+    print('both of these are false')
+```
+
+    at least one part is true
+
+
+
+```python
+import numpy
+```
+
+
+```python
+
+```
+
+# Lists
+
+```python
+odds = [1, 3, 5, 7]
+print('odds are:', odds)
+```
+
+    odds are: [1, 3, 5, 7]
+
+
+
+```python
+print('first element:', odds[0])
+print('last element:', odds[3])
+print('"-1" element:', odds[-1])
+```
+
+    first element: 1
+    last element: 7
+    "-1" element: 7
+
+
+
+```python
+names = ['curie', 'darwing', 'Turning'] # Typo in Darwin's name 
+
+print('names is originally:', names)
+
+names[1] = 'Darwin' # correct the name 
+
+print('final value of names:', names)
+```
+
+    names is originally: ['curie', 'darwing', 'Turning']
+    final value of names: ['curie', 'Darwin', 'Turning']
+
+
+
+```python
+#name = 'Darwin'
+#name[0] = 'd'
+```
+
+
+```python
+odds.append(11)
+print('odds after adding a value:', odds)
+```
+
+    odds after adding a value: [1, 3, 5, 7, 11]
+
+
+
+```python
+removed_element = odds.pop(0)
+print('odds after removing the first element:', odds)
+print('removed_element:', removed_element)
+```
+
+    odds after removing the first element: [3, 5, 7, 11]
+    removed_element: 1
+
+
+
+```python
+odds.reverse()
+print('odds after reversing:', odds)
+```
+
+    odds after reversing: [11, 7, 5, 3]
+
+
+
+```python
+odds = [3,5,7]
+primes = odds
+primes.append(2)
+print('primes:', primes)
+print('odds:', odds)
+```
+
+    primes: [3, 5, 7, 2]
+    odds: [3, 5, 7, 2]
+
+
+
+```python
+odds = [3,5,7]
+primes = list(odds)
+primes.append(2)
+print('primes:', primes)
+print('odds:', odds)
+```
+
+    primes: [3, 5, 7, 2]
+    odds: [3, 5, 7]
+
+
+
+```python
+binomial_name = "Drosophilia melanogaster"
+group = binomial_name[0:10]
+print('group:', group)
+
+species = binomial_name[11:23]
+print('species:', species)
+
+chromosomes = ['X', 'Y', '2', '3', '4']
+autosomes = chromosomes[2:5]
+print('autosomes:', autosomes)
+
+last = chromosomes[-1]
+print('last:', last)
+```
+
+    group: Drosophili
+    species:  melanogaste
+    autosomes: ['2', '3', '4']
+    last: 4
+
+
+
+```python
+date = 'Monday 4 January 2023'
+day = date[0:6]
+print('using 0 to begin range:', day)
+day = date[:6]
+print('Omitting beginning index:', day)
+```
+
+    using 0 to begin range: Monday
+    Omitting beginning index: Monday
+
+
+
+```python
+months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+sond = months[8:12]
+print('With known last position:', sond)
+
+sond = months[8:len(months)]
+print('Using len() to get last entry:', sond)
+sond = months[8:]
+print('Omitting ending index:', sond)
+```
+
+    With known last position: ['sep', 'oct', 'nov', 'dec']
+    Using len() to get last entry: ['sep', 'oct', 'nov', 'dec']
+    Omitting ending index: ['sep', 'oct', 'nov', 'dec']
+
+
+## Data Visualization 
+
+```python
+import numpy
+data = numpy.loadtxt(fname= 'inflammation-01.csv', delimiter = ',')
+```
+
+
+```python
+# Heat map of patient inflammation over time 
+import matplotlib.pyplot
+image = matplotlib.pyplot.imshow(data)
+matplotlib.pyplot.show()
+```
+
+
+![png](output_1_0.png)
+
+
+
+```python
+# Average inflammation over time 
+
+ave_inflammation = numpy.mean(data, axis = 0)
+ave_plot = matplotlib.pyplot.plot(ave_inflammation)
+matplotlib.pyplot.show()
+```
+
+
+![png](output_2_0.png)
+
+
+
+```python
+max_plot = matplotlib.pyplot.plot(numpy.amax(data, axis = 0))
+matplotlib.pyplot.show()
+```
+
+
+![png](output_3_0.png)
+
+
+
+```python
+Min_plot = matplotlib.pyplot.plot(numpy.amin(data, axis = 0))
+matplotlib.pyplot.show()
+```
+
+
+![png](output_4_0.png)
+
+
+
+```python
+fig = matplotlib.pyplot.figure(figsize =(10.0, 3.0))
+
+axes1 = fig.add_subplot(1, 3, 1)
+axes2 = fig.add_subplot(1, 3, 2)
+axes3 = fig.add_subplot(1, 3, 3)
+
+axes1.set_ylabel('average')
+axes1.plot(numpy.mean(data, axis = 0))
+
+axes2.set_ylabel('max')
+axes2.plot(numpy.amax(data, axis = 0))
+
+axes3.set_ylabel('min')
+axes3.plot(numpy.amin(data, axis = 0))
+
+fig.tight_layout()
+
+matplotlib.pyplot.savefig('inflammation.png')
+matplotlib.pyplot.show()
+```
+
+
+![png](output_5_0.png)
 
 

@@ -871,7 +871,7 @@ print_temperatures()
 ```
 
 
-### Creating Functions 2 and 3
+### Creating Functions 2,3, and 4
 
 
 ```python

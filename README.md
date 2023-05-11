@@ -2286,3 +2286,283 @@ print(protein_sequence)
 ```
 
      
+
+
+### Python fundamentals 
+
+
+
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "23"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Any python interpreter can be used as a calculator:\n",
+    "3 + 5 * 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Lets save a value to a cariable \n",
+    "weight_kg = 60"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "60\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(weight_kg)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# weight0 = valid \n",
+    "# 0weight = invalid\n",
+    "# weight and Weight are different "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Types of data\n",
+    "# There are three common types of data \n",
+    "# Integer numbers\n",
+    "# floating point numbers\n",
+    "# Strings"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Floating point number\n",
+    "weight_kg = 60.3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# String comprised of letters\n",
+    "patient_name = \"Jon Smith\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# String comprised of numbers\n",
+    "patient_id = \"001\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "132.66\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Use variables in python\n",
+    "\n",
+    "weight_lb = 2.2 * weight_kg\n",
+    "\n",
+    "print(weight_lb)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'inflam_001'"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Lets add a prefix to our patient id\n",
+    "\n",
+    "patient_id = 'inflam_' + patient_id\n",
+    "\n",
+    "patient_id"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "inflam_001 weight in kilograms: 60.3\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Lets combine print statements\n",
+    "\n",
+    "print(patient_id, 'weight in kilograms:', weight_kg)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'float'>\n",
+      "<class 'str'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# we can call a function inside another function \n",
+    "\n",
+    "print(type(60.3))\n",
+    "\n",
+    "print(type(patient_id))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "weight in lbs: 132.66\n"
+     ]
+    }
+   ],
+   "source": [
+    "# we can also do calculations inside the print function \n",
+    "\n",
+    "print('weight in lbs:', 2.2 * weight_kg)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "60.3\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(weight_kg)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "weight in kilograms is now: 65.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "weight_kg = 65.0 \n",
+    "print('weight in kilograms is now:', weight_kg)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
